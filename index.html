@@ -16,17 +16,25 @@
   <nav class="navbar">
     <a class="logo" href="#home">AT<span>.</span></a>
 
-    <button class="menu-button" aria-label="Open menu">
+    <button class="menu-button" id="menu-button" aria-label="Open navigation menu">
       <span></span>
       <span></span>
     </button>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <div class="theme-controls">
+      <button class="theme-button" id="theme-button" aria-label="Change colour theme">
+        ◐
+      </button>
+      <span class="theme-name" id="theme-name">Neon Night</span>
+    </div>
   </nav>
 
   <main>
@@ -38,6 +46,11 @@
 
       <div class="hero-content reveal">
         <p class="eyebrow">Interactive media designer / Ottawa, Ontario</p>
+
+        <div class="availability-badge">
+          <span></span>
+          Available for creative opportunities
+        </div>
 
         <h1>
           Digital ideas<br>
@@ -55,12 +68,20 @@
         </a>
       </div>
 
+      <div class="hero-portrait reveal">
+        <img
+          src="images/alvin-portrait.jpg"
+          alt="Alvin Tumusiime wearing sunglasses in a colourful neon-lit space"
+        >
+        <span>CREATIVE<br>IN MOTION</span>
+      </div>
+
       <div class="hero-side-text">SCROLL TO EXPLORE</div>
 
       <div class="hero-number">
         <span>01</span>
         <div></div>
-        <span>04</span>
+        <span>05</span>
       </div>
     </section>
 
@@ -85,7 +106,20 @@
       <div class="section-label reveal">02 / ABOUT THE CREATIVE</div>
 
       <div class="about-layout">
+
         <div class="about-heading reveal">
+          <div class="portrait-wrapper">
+            <div class="portrait-ring"></div>
+
+            <img
+              src="images/alvin-portrait.jpg"
+              alt="Portrait of Alvin Tumusiime, an interactive media designer"
+              class="portrait"
+            >
+
+            <span class="portrait-label">OTTAWA / CANADA</span>
+          </div>
+
           <p class="small-label">A designer with a point of view</p>
           <h2>Making digital work feel <em>human.</em></h2>
         </div>
@@ -127,6 +161,7 @@
             His goal is to use design and technology to help people, brands, and communities stand out online.
           </p>
         </article>
+
       </div>
     </section>
 
@@ -135,6 +170,7 @@
 
       <div class="skills-header reveal">
         <h2>What Alvin<br><em>brings to the table.</em></h2>
+
         <p>
           A growing collection of creative and technical skills used
           to turn ideas into clear, engaging experiences.
@@ -142,6 +178,7 @@
       </div>
 
       <div class="skill-grid">
+
         <div class="skill-card reveal">
           <span class="skill-number">01</span>
           <div class="skill-icon">⌁</div>
@@ -173,12 +210,130 @@
           <p>Thoughtful ideas that help people communicate with clarity.</p>
           <span class="skill-arrow">↗</span>
         </div>
+
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="section-label reveal">04 / SELECTED WORK</div>
+
+      <div class="projects-heading reveal">
+        <p class="eyebrow">Ideas made visible</p>
+
+        <h2>Selected <em>projects.</em></h2>
+
+        <p>
+          Selected creative and academic projects exploring branding,
+          entrepreneurship, events, and digital experiences.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card project-purple reveal">
+          <div class="project-top">
+            <span>01 / EVENT EXPERIENCE</span>
+            <span>2026</span>
+          </div>
+
+          <div class="project-shape shape-star">✦</div>
+
+          <div class="project-info">
+            <p class="project-type">Branding · Promotion · Social Media</p>
+            <h3>Afro Bana</h3>
+
+            <p>
+              A colourful cultural event concept connecting music, food,
+              fashion, and community through a bold visual identity.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-cyan reveal">
+          <div class="project-top">
+            <span>02 / DIGITAL PRODUCT</span>
+            <span>2026</span>
+          </div>
+
+          <div class="project-shape shape-circle">+</div>
+
+          <div class="project-info">
+            <p class="project-type">UI Design · Web Development</p>
+            <h3>Event Connect</h3>
+
+            <p>
+              A digital tool concept that helps audiences discover local events
+              and helps promoters share their experiences online.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-pink reveal">
+          <div class="project-top">
+            <span>03 / CREATIVE DIRECTION</span>
+            <span>2026</span>
+          </div>
+
+          <div class="project-shape shape-lines">///</div>
+
+          <div class="project-info">
+            <p class="project-type">Content · Art Direction · Strategy</p>
+            <h3>Creative in Motion</h3>
+
+            <p>
+              A personal portfolio direction built around movement, colour,
+              nightlife energy, and digital self-expression.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card project-gold reveal">
+          <div class="project-top">
+            <span>04 / ENTREPRENEURSHIP</span>
+            <span>2026</span>
+          </div>
+
+          <div class="project-shape shape-ovo">OVO</div>
+
+          <div class="project-info">
+            <p class="project-type">Research · Presentation · Brand Strategy</p>
+            <h3>Drake: Entrepreneurial Mindset</h3>
+
+            <p>
+              An academic presentation examining Drake’s journey from acting
+              and music into branding, business ownership, and cultural impact.
+            </p>
+
+            <button class="project-link" type="button" data-pdf-toggle>
+              View project on this page ↓
+            </button>
+
+            <div class="pdf-viewer">
+              <iframe
+                src="Entrepreneurial-Mindset-Final-Drake.pdf"
+                title="Drake Entrepreneurial Mindset presentation"
+                loading="lazy"
+              ></iframe>
+
+              <a
+                href="Entrepreneurial-Mindset-Final-Drake.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Open PDF in a new tab ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
     <section class="statement section">
       <div class="statement-orb"></div>
+
       <p class="eyebrow reveal">The next chapter</p>
+
       <h2 class="reveal">
         Turning creative energy<br>
         into <em>real connection.</em>
@@ -186,15 +341,85 @@
     </section>
 
     <section class="contact section" id="contact">
-      <div class="section-label reveal">04 / LET’S CONNECT</div>
+      <div class="section-label reveal">05 / LET’S CONNECT</div>
 
-      <div class="contact-content reveal">
-        <p class="eyebrow">Have an idea?</p>
-        <h2>Let’s make it<br><em>stand out.</em></h2>
-        <a class="primary-button" href="mailto:alvin@example.com">
-          Start a conversation
-          <span>↗</span>
-        </a>
+      <div class="contact-layout">
+
+        <div class="contact-content reveal">
+          <p class="eyebrow">Have an idea?</p>
+
+          <h2>Let’s make it<br><em>stand out.</em></h2>
+
+          <p class="contact-description">
+            Alvin is open to creative conversations, digital projects,
+            event promotions, and new opportunities.
+          </p>
+
+          <div class="contact-details">
+
+            <a href="tel:+16137121347">
+              <span class="contact-icon">☎</span>
+
+              <span>
+                <small>Phone</small>
+                613-712-1347
+              </span>
+            </a>
+
+            <a href="mailto:alvintumusiime44@gmail.com">
+              <span class="contact-icon">✉</span>
+
+              <span>
+                <small>Email</small>
+                alvintumusiime44@gmail.com
+              </span>
+            </a>
+
+          </div>
+
+          <a class="primary-button" href="mailto:alvintumusiime44@gmail.com">
+            Start a conversation
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="assistant-card reveal" id="assistant">
+          <div class="assistant-top">
+            <div class="assistant-status">
+              <span></span>
+              Alvin’s Creative Guide
+            </div>
+
+            <span class="assistant-mark">AI</span>
+          </div>
+
+          <div class="assistant-message">
+            <p class="assistant-label">CREATIVE GUIDE</p>
+
+            <h3>Need help exploring?</h3>
+
+            <p>
+              Choose a question below and I’ll point you to the right part
+              of Alvin’s portfolio.
+            </p>
+          </div>
+
+          <div class="assistant-options">
+            <button data-answer="about">Who is Alvin?</button>
+            <button data-answer="skills">What can Alvin do?</button>
+            <button data-answer="design">What is Alvin interested in?</button>
+            <button data-answer="contact">How can I contact Alvin?</button>
+          </div>
+
+          <button class="assistant-reset" id="assistant-reset">
+            Reset guide
+          </button>
+
+          <div class="assistant-response" id="assistant-response">
+            Select a question above to explore the website.
+          </div>
+        </div>
+
       </div>
     </section>
 
