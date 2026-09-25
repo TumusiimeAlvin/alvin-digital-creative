@@ -120,11 +120,11 @@ button {
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 22px;
   list-style: none;
   color: var(--muted);
   font-family: "DM Mono", monospace;
-  font-size: .68rem;
+  font-size: .64rem;
   text-transform: uppercase;
 }
 
@@ -237,7 +237,6 @@ button {
   background: rgba(74, 222, 128, .08);
   font-family: "DM Mono", monospace;
   font-size: .62rem;
-  letter-spacing: .5px;
   text-transform: uppercase;
 }
 
@@ -426,6 +425,7 @@ h2 em {
 .skills-header h2,
 .projects-heading h2,
 .case-study-header h2,
+.presentation-heading h2,
 .contact h2 {
   margin-top: 25px;
   font-size: clamp(2.5rem, 5vw, 5rem);
@@ -513,7 +513,8 @@ h2 em {
 }
 
 .skills-header,
-.projects-heading {
+.projects-heading,
+.presentation-heading {
   margin-bottom: 60px;
 }
 
@@ -524,8 +525,9 @@ h2 em {
 }
 
 .skills-header p,
-.projects-heading > p:last-child {
-  max-width: 300px;
+.projects-heading > p:last-child,
+.presentation-heading > p:last-child {
+  max-width: 450px;
   color: var(--muted);
 }
 
@@ -684,7 +686,6 @@ h2 em {
   line-height: 1.5;
 }
 
-/* Drake case study */
 .drake-case-study {
   max-width: none;
   overflow: hidden;
@@ -859,6 +860,64 @@ h2 em {
   max-width: 680px;
   color: #d7c9ad;
   line-height: 1.6;
+}
+
+.presentation-section {
+  max-width: none;
+  background:
+    radial-gradient(circle at 80% 10%, var(--card-glow), transparent 30%),
+    var(--dark-two);
+}
+
+.presentation-heading {
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.presentation-heading h2 {
+  max-width: 750px;
+}
+
+.presentation-viewer {
+  display: grid;
+  max-width: 1000px;
+  gap: 45px;
+  margin: auto;
+}
+
+.presentation-page {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, .35);
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.presentation-page:hover {
+  box-shadow: 0 30px 90px var(--card-glow);
+  transform: translateY(-8px);
+}
+
+.presentation-page-label {
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  left: 28px;
+  padding: 8px 10px;
+  color: var(--dark);
+  background: var(--cyan);
+  font-family: "DM Mono", monospace;
+  font-size: .6rem;
+  letter-spacing: 1px;
+}
+
+.presentation-page img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .statement {
@@ -1255,7 +1314,8 @@ footer {
   }
 
   .skills-header p,
-  .projects-heading > p:last-child {
+  .projects-heading > p:last-child,
+  .presentation-heading > p:last-child {
     margin-top: 25px;
   }
 
@@ -1287,6 +1347,21 @@ footer {
 
   .drake-conclusion {
     padding: 25px;
+  }
+
+  .presentation-viewer {
+    gap: 25px;
+  }
+
+  .presentation-page {
+    padding: 8px;
+  }
+
+  .presentation-page-label {
+    top: 16px;
+    left: 16px;
+    padding: 6px 8px;
+    font-size: .48rem;
   }
 
   .statement h2 {

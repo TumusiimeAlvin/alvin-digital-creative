@@ -141,6 +141,9 @@ const assistantResponses = {
   drake:
     "The Drake project examines how Aubrey Drake Graham moved from acting and music into branding, entrepreneurship, OVO, and cultural influence. It focuses on consistency, creativity, strategic thinking, adaptability, and long-term brand building.",
 
+  presentation:
+    "The complete nine-page Drake presentation is displayed directly in the Presentation section. Choose Presentation in the navigation and scroll through every page.",
+
   contact:
     "You can contact Alvin by phone at 613-712-1347 or by email at alvintumusiime44@gmail.com."
 };
@@ -187,4 +190,4 @@ if (assistantReset && assistantResponse) {
     assistantResponse.textContent =
       "Select a question above to explore the website.";
   });
-}
+});
