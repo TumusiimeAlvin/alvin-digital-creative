@@ -138,8 +138,8 @@ const assistantResponses = {
   skills:
     "Alvin works with web design, visual branding, social-media content, promotional graphics, HTML, CSS, Figma, and creative strategy.",
 
-  design:
-    "Alvin is interested in music, entertainment, local events, entrepreneurship, branding, and digital tools that help people and communities connect.",
+  drake:
+    "The Drake project examines how Aubrey Drake Graham moved from acting and music into branding, entrepreneurship, OVO, and cultural influence. It focuses on consistency, creativity, strategic thinking, adaptability, and long-term brand building.",
 
   contact:
     "You can contact Alvin by phone at 613-712-1347 or by email at alvintumusiime44@gmail.com."
@@ -186,25 +186,5 @@ if (assistantReset && assistantResponse) {
   assistantReset.addEventListener("click", () => {
     assistantResponse.textContent =
       "Select a question above to explore the website.";
-  });
-}
-
-const pdfToggle = document.querySelector("[data-pdf-toggle]");
-const pdfViewer = document.querySelector(".pdf-viewer");
-
-if (pdfToggle && pdfViewer) {
-  pdfToggle.addEventListener("click", () => {
-    const isOpen = pdfViewer.classList.toggle("open");
-
-    pdfToggle.textContent = isOpen
-      ? "Hide project PDF ↑"
-      : "View project on this page ↓";
-
-    if (isOpen) {
-      pdfViewer.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
-      });
-    }
   });
 }
