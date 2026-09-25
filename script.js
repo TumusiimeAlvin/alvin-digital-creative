@@ -1,26 +1,37 @@
+// Mark JavaScript as ready only after this file has loaded.
+// Without this class, CSS keeps all content visible by default.
+document.documentElement.classList.add("js");
+
 const revealItems = document.querySelectorAll(".reveal");
 
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
+function revealAll() {
+  revealItems.forEach((element) => element.classList.add("visible"));
+}
 
-  revealItems.forEach((item) => {
-    revealObserver.observe(item);
+// Animate elements when they enter the viewport, with a guaranteed fallback.
+if (revealItems.length) {
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px 120px 0px" }
+    );
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+
+  // Make the first screen appear immediately.
+  document.querySelectorAll(".hero .reveal").forEach((element) => {
+    element.classList.add("visible");
   });
-} else {
-  revealItems.forEach((item) => {
-    item.classList.add("visible");
-  });
+
+  // Final safety net for browsers/extensions that do not fire observer callbacks.
+  window.setTimeout(revealAll, 900);
 }
 
 const menuButton = document.querySelector("#menu-button");
@@ -190,4 +201,4 @@ if (assistantReset && assistantResponse) {
     assistantResponse.textContent =
       "Select a question above to explore the website.";
   });
-});
+}

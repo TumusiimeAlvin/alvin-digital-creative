@@ -1142,14 +1142,29 @@ footer {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(35px);
+  /* Visible by default: delayed or blocked JavaScript can never blank the page. */
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity .8s ease, transform .8s ease;
 }
 
-.reveal.visible {
+/* Turn on the entrance animation only after JavaScript has loaded successfully. */
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(35px);
+}
+html.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal,
+  html.js .reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .cursor-glow {
